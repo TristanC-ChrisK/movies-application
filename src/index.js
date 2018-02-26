@@ -1,5 +1,4 @@
 import getMovies from './omdb';
-import req from './youtube-api';
 
 setTimeout(() => {
   document.querySelector('main').style.display = 'block';
