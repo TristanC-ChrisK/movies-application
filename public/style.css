@@ -1,5 +1,7 @@
 html, body {
-    font-size: calc(1vmax + 1em);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #loading {
@@ -15,44 +17,42 @@ main {
 
 #container {
   display: grid;
-  grid-template-columns: 10vw 80vw 10vw;
-  -ms-grid-template-rows: 10vh 80vh 10vh;
-  grid-template-rows: 10vh 10vh 70vh 10vh;
+  grid-template-columns: 10vw 40vw 40vw 10vw;
+  -ms-grid-template-rows: 5vh 80vh 10vh;
+  grid-template-rows: 1fr 70vh 5vh;
+  overflow: hidden;
 }
 
-h1 {
-  padding: 1rem;
-  font-size: 1em;
-  grid-row: 1;
-  grid-column: 2;
-  text-align: center;
+header {
+  padding: 10px;
+  margin: auto 0;
+  border-bottom: solid 1px blue;
   text-overflow: ellipsis;
-  margin: auto;
 }
 
 .content {
-  grid-row: 2;
-  grid-column: 2;
-  /* margin: auto; */
-}
-
-form {
-  justify-content: center;
+  max-width: 70%;
   display: flex;
-  flex-flow: nowrap;
-  text-align: center;
+  grid-row: 1;
+  grid-column: 1/4;
+  padding: 0.6rem;
 }
 
 input {
-  height: 3vmax;
-  font-size: 1rem;
-  width: 100%;
+  min-height: 20px;
+  font-size: 0.6rem;
+  max-width: 70%;
+}
+
+button {
+  min-height: 20px;
+  width: auto;
 }
 
 #poster-img {
   text-align: center;
-  grid-row: 3;
-  grid-column: 2;
+  grid-row: 2;
+  grid-column: 2/3;
   overflow: scroll;
 }
 
@@ -61,13 +61,27 @@ input {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.6rem;
   margin: 0 auto;
+  padding-bottom: 0.6rem;
 }
 
 img {
   text-align: center;
   margin: 0 auto;
   height: 200px;
-  padding: 10px;
+}
+
+fieldset {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+input {
+  min-width: 100%;
+}
+
+li {
+  list-style: none;
+  overflow: hidden;
 }
