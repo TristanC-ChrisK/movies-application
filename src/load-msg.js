@@ -6,3 +6,4 @@ const addMovie = () => {
     <input type='date' placeholder='Date of Release'></input>;
     <input type='text' placeholder='IMDB Title #'></input>;
     <input type='rating' placeholder = 'Rating'></input>;
+  </form>
