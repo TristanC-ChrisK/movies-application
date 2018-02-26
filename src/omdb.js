@@ -14,10 +14,12 @@ const getMovies = (title) => {
 
             for (let i = 0; i < 10; i++) {
 
-                resultList.innerHTML += `<div id='results${i}'><img src="${results.Search[i].Poster}"></div><p>${results.Search[i].Title} ${results.Search[i].Year}</p></div>`;
+                let {Poster: poster, Title: title, Year: year} = results.Search[i];
+
+                resultList.innerHTML += `<div id='results${i}'><img src="${poster}"></div><p>${title} ${year}</p></div>`;
 
                 const apiKey = 'AIzaSyD50XUXFl0OiIviqMZTB5qIqzCJY9utQj4'; // pls don't steal me :)
-                fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${results.Search[i].Title}+Trailer&maxResults=1&part=snippet`)
+                fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${title}+${year}+Trailer&maxResults=1&part=snippet`)
                     .then(response => response.json()
                         .then(results => {
                             let img = document.getElementById('results' + i).children[0];
