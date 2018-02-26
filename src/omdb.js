@@ -7,10 +7,10 @@ const getMovies = (title) => {
     r: 'json',
     page: 1,
     plot: 'full'})
-    .then(results => console.log(results))
     .then(results => {
       for (let i = 0; i < 10; i++) {
-        document.getElementById('poster-img').innerHTML += `<div class='results'><p>${results.Search[i].Title} ${results.Search[i].Year}</p><img src="${results.Search[i].Poster}"></div>`;
+        document.getElementById('poster-img')
+          .innerHTML += `<div class='results'><img src="${results.Search[i].Poster}"><p>${results.Search[i].Title} ${results.Search[i].Year}</p></div>`;
       }
     });
 };
