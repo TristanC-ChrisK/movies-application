@@ -17,7 +17,7 @@ main {
 
 #container {
   display: grid;
-  grid-template-columns: 10vw 40vw 40vw 10vw;
+  grid-template-columns: 2vw 48vw 48vw 2vw;
   -ms-grid-template-rows: 5vh 80vh 10vh;
   grid-template-rows: 1fr 70vh 5vh;
   overflow: hidden;
@@ -56,14 +56,21 @@ button {
   overflow: scroll;
 }
 
-.results {
-  padding-top: 1rem;
+div>img {
+  text-align: center;
+  margin: 0 auto;
+  height: auto;
+  max-width: 100px;
 }
 
-p {
+#poster-img>p {
   font-size: 0.6rem;
   margin: 0 auto;
-  padding-bottom: 0.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.results {
+  padding-top: 1rem;
 }
 
 img {
@@ -72,15 +79,9 @@ img {
   height: 200px;
 }
 
-fieldset {
+#myMovies {
   grid-row: 2/3;
   grid-column: 3/4;
-}
-
-#myMovies {
-  display: grid;
-  grid-template-rows: 2;
-  grid-template-columns: 2;
 }
 
 #myMovies>p {
@@ -92,12 +93,13 @@ fieldset {
 
 
 .movieTitle {
-  grid-column: 1/2;
-  font-size: 1rem;
+  text-align: center;
+  padding: 1em;
 }
 
 .movieTitle>button {
-  grid-column: 2/3;
+  width: auto;
+  height: 10px;
 }
 
 form {

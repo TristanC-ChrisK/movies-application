@@ -1,19 +1,15 @@
 /* global fetch */
-const myMovies = () => fetch('/api/movies').then(response => response.json());
+const updateMovies = () => fetch('/api/movies').then(response => response.json());
 
-myMovies().then(movies => {
+updateMovies().then(movies => {
   for (let i = 0; i < movies.length; i++) {
-    document.getElementById('myMovies').innerHTML += `<div class='movieTitle'><p>${movies[i].title}</p><button id=${movies[i].title}>x</button></div>`;
+    document.getElementById('myMovies').innerHTML +=
+      `<div class='movieTitle' id='${movies[i].id}'>
+        <p>${movies[i].title}</p>
+          <button name='delete' onclick='deleteMovie(this.id)'>Remove</button>
+          <button id=${movies[i]} onclick='patchMovie'>Edit</button>
+      </div>`;
   }
 });
 
-const formElement = document.querySelector('form');
-const formData = new FormData(formElement);
-const object = {};
-formData.forEach((value, key) => {
-  object[key] = value;
-});
-
-const json = JSON.stringify(object);
-
-export default myMovies;
+export default updateMovies;

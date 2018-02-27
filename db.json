@@ -3,30 +3,12 @@
     {
       "title": "Casablanca",
       "rating": "4",
-      "id": 1
+      "id": "tt0034583"
     },
     {
       "title": "Star Wars: A New Hope",
       "rating": "5",
-      "id": 2
-    },
-    {
-      "movieName": "",
-      "id": 3,
-      "rating": "",
-      "add": ""
-    },
-    {
-      "movieName": "sdad",
-      "id": "dasdsa",
-      "rating": "s",
-      "add": ""
-    },
-    {
-      "movieName": "",
-      "id": 4,
-      "rating": "",
-      "add": ""
+      "id": "tt0076759"
     }
   ]
 }
