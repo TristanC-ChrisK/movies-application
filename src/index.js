@@ -1,12 +1,12 @@
 import getMovies from './omdb';
-import theJordan from './myMovies';
+import updateMovies from './myMovies';
 
 setTimeout(() => {
   document.querySelector('main').style.display = 'block';
   document.getElementById('loading').style.display = 'none';
 }, 2000);
 
-theJordan();
+updateMovies();
 
 let title = document.getElementById('searchVal');
 document.getElementById('searchVal').addEventListener('change', () => {
